@@ -4,12 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewpoint" content="width=device-width , initial-scale=1">
 	<title>ΑΠΔ</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	  	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <style>
 @font-face {
@@ -813,57 +811,23 @@ a:hover {
 .container .btn {
 	margin:10px;
 }
-
-#imaginary_container{
-    margin-top:30%; /* Don't copy this */
-}
-.stylish-input-group .input-group-addon{
-    background: white !important; 
-}
-.stylish-input-group .form-control{
-	border-right:0; 
-	box-shadow:0 0 0; 
-	border-color:#ccc;
-}
-.stylish-input-group button{
-    border:0;
-    background:transparent;
-}
-
 </style>
 <body>
-	<div id="header" onclick = "myFunction11();myFunction22();myFunction33();">
+	<div id="header">
 		<div class="section">
 			<div class="logo">
 				<a href="index.html">
 				<img style="position:relative; bottom:60; top:5; left:-12px;" class="border" width="125px" height="125px"  src="ika.png" alt="logo ika"  >
 				</a>
 			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6 col-sm-offset-3">
-						<div id="imaginary_container"> 
-							<div class="input-group stylish-input-group">
-								<input type="text" class="form-control"  placeholder="Search" >
-								<span class="input-group-addon">
-									<button type="submit">
-										<span class="glyphicon glyphicon-search"></span>
-									</button>  
-								</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
 			<ul>
 				<li class="selected">
-					<a onmouseover = "myFunction11();myFunction22();myFunction33()" href="index.html">Αρχικη</a>
+					<a href="index.html">Αρχικη</a>
 				</li>
 				<li>
 					<div class="Dropdown">
-						<button onmouseover = "myFunction1();myFunction22();myFunction33()"   class="dropbtn">Ασφαλισμενοι</button>
-						<div  id="myDropdown1" class="dropdown-content">
+						<button onclick="myFunction1()" class="dropbtn">Ασφαλισμενοι</button>
+						<div id="myDropdown1" class="dropdown-content">
 							
 							<a href="employers.html">Ασφαλιση</a>
 							
@@ -880,7 +844,7 @@ a:hover {
 					</li>
 				<li>
 					<div class="Dropdown">
-						<button onmouseover="myFunction2();myFunction11();myFunction33()"  class="dropbtn">Συνταξιουχοι</button>
+						<button onclick="myFunction2()" class="dropbtn">Συνταξιουχοι</button>
 						<div id="myDropdown2" class="dropdown-content">
 							
 							<a href="employers.html">Αιτηση Συνταξιοδοτησης</a>
@@ -895,7 +859,7 @@ a:hover {
 					</li>
 				<li>
 					<div class="Dropdown">
-						<button onmouseover = "myFunction3();myFunction22();myFunction11()" class="dropbtn">Εργοδοτες</button>
+						<button onclick="myFunction3()" class="dropbtn">Εργοδοτες</button>
 						<div id="myDropdown3" class="dropdown-content">
 							
 							<a href="employers.html">Ασφαλιση Εργαζομενου</a>
@@ -908,51 +872,88 @@ a:hover {
 						</div>
 					</div>
 
-					
 					<script>
 					/* When the user clicks on the button, 
 					toggle between hiding and showing the dropdown content */
 					function myFunction1() {
-						
-						document.getElementById("myDropdown1").style.display='block';
+						document.getElementById("myDropdown1").classList.toggle("show");
 					}
-					function myFunction11() {
-						document.getElementById("myDropdown1").style.display='none';
+
+					// Close the dropdown if the user clicks outside of it
+					window.onclick = function(event) {
+					  if (!event.target.matches('.dropbtn')) {
+
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						var i;
+						for (i = 0; i < dropdowns.length; i++) {
+						  var openDropdown = dropdowns[i];
+						  if (openDropdown.classList.contains('show')) {
+							openDropdown.classList.remove('show');
+						  }
+						}
+					  }
 					}
-					
 				</script>
 				<script>
 					/* When the user clicks on the button, 
 					toggle between hiding and showing the dropdown content */
 					function myFunction2() {
-						
-						document.getElementById("myDropdown2").style.display='block';
+						document.getElementById("myDropdown2").classList.toggle("show");
 					}
-					function myFunction22() {
-						document.getElementById("myDropdown2").style.display='none';
+
+					// Close the dropdown if the user clicks outside of it
+					window.onclick = function(event) {
+					  if (!event.target.matches('.dropbtn')) {
+
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						var i;
+						for (i = 0; i < dropdowns.length; i++) {
+						  var openDropdown = dropdowns[i];
+						  if (openDropdown.classList.contains('show')) {
+							openDropdown.classList.remove('show');
+						  }
+						}
+					  }
 					}
 				</script>
 				<script>
 					/* When the user clicks on the button, 
 					toggle between hiding and showing the dropdown content */
 					function myFunction3() {
-						
-						document.getElementById("myDropdown3").style.display='block';
+						document.getElementById("myDropdown3").classList.toggle("show");
 					}
-					function myFunction33() {
-						document.getElementById("myDropdown3").style.display='none';
+
+					// Close the dropdown if the user clicks outside of it
+					window.onclick = function(event) {
+					  if (!event.target.matches('.dropbtn')) {
+
+						var dropdowns = document.getElementsByClassName("dropdown-content");
+						var i;
+						for (i = 0; i < dropdowns.length; i++) {
+						  var openDropdown = dropdowns[i];
+						  if (openDropdown.classList.contains('show')) {
+							openDropdown.classList.remove('show');
+						  }
+						}
+					  }
 					}
 				</script>
 				</li>
 				<li>
-					<a onmouseover = "myFunction11();myFunction22();myFunction33()" href="announcements.html">Ανακοινωσεις</a>
+					<a href="announcements.html">Ανακοινωσεις</a>
 				<li>
-					<a onmouseover = "myFunction11();myFunction22();myFunction33()" href="contact.html">Επικοινωνια</a>
+					<a href="contact.html">Επικοινωνια</a>
 				</li>
 				<li>
-					<a onmouseover = "myFunction11();myFunction22();myFunction33()" href="loginsignup.html">Εισοδος-Εγγραφη</a>
+					<a href="loginsignup.html">Εισοδος-Εγγραφη</a>
 				</li>
 			</ul>
+			<div class="topnav">
+				<div class="search-container">
+					<input type="text" placeholder="Search.." name="search">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</div>
+			</div> 
 			<div class="languages">	
 			<select>
 			<option value="Ελληνικά">Ελληνικά</option>
@@ -1003,5 +1004,8 @@ a:hover {
 		</form>
 	<div>
 
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>	
