@@ -989,7 +989,7 @@ input:valid {
 				
 					<label for="user"  class="label">Όνομα Χρήστη** <br>(1-40 γράμματα-αριθμούς-κάτω παύλες)</label>
 					<p id="er1" style="color:red;"></p>
-					<input onkeyup="usern()" id = "userup" name="userup" type="text" class="input" required pattern = [a-zA-Z0-9_]{1,40} required minlength="1" maxlength="40">
+					<input onkeyup="usern()" style="border: 1px solid green" id = "userup" name="userup" type="text" class="input"  pattern = [a-zA-Z0-9_]{1,40} required required minlength="1" maxlength="40">
 
 					<script>
 					function usern() {
@@ -1015,21 +1015,21 @@ input:valid {
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Κωδικός Εισόδου** (Μέχρι 40 σύμβολα)</label>
-					<input id = "passup" name="passup" type="password" class="input" data-type="password" required minlength="1" maxlength="40">
+					<input id = "passup" style="border: 1px solid green" name="passup" type="password" class="input" data-type="password" required minlength="1" maxlength="40">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Επανάληψη Κωδικού Εισόδου**</label>
-					<input id="passup1" name="passup1" type="password" class="input" data-type="password">
+					<input id="passup1" name="passup1" style="border: 1px solid green"  type="password" class="input" data-type="password">
 					<p id="er8" style="color:red;"></p>
 					
 				</div>
 				<div class="group">
 					<label for="name" class="label">Όνομα**</label>
-					<input name="nameup" type="text" class="input" required>
+					<input name="nameup" type="text" class="input" required style="border: 1px solid green" pattern= [a-zA-Z]>
 				</div>
 				<div class="group">
 					<label for="name" class="label">Επίθετο**</label>
-					<input name="surnameup" type="text" class="input" required>
+					<input name="surnameup" type="text" class="input" required style="border: 1px solid green" pattern= [a-zA-Z]>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Διεύθυνση Email ( χχχχ@yyyyy.com )</label>
@@ -1041,7 +1041,7 @@ input:valid {
 				</div>
 				<div class="group">
 					<label for="pass" class="label">AMKA** (Αριθμός Μητρώου Κοινωνικής Ασφάλισης)->(11 Αριθμοί)</label>
-					<input id ="amka" name="amka" type="text" class="input" required pattern =[0-9]{11}>
+					<input id ="amka" name="amka" type="text" class="input" required pattern =[0-9]{11} style="border: 1px solid green">
 
 
 
